@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-commerce website</title>
+      <!-- Link To CSS -->
+      <link rel="stylesheet" href="style.css">
+      <!-- Box Icons -->
+      <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+<!--link to swiper css-->
+      <link 
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+      />
+</head>
+<body>
+    <!--navbar-->
+    <header>
+        <a href="#" class="logo"><i class='bx bx-spray-can'></i> Glow</a>
+
+                <ul class="navbar">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="new/index.html">New Arrivals</a></li>
+                    <li><a href="products/index.html">Products</a></li>
+                    <li><a href="reviews/index.html">Reviews</a></li>
+                    <li><a href="contact/index.html">Contact</a></li>
+                </ul>
+
+        <!--Icon-->
+
+        <div class="header-icons">
+          <i class='bx bx-menu' id="menu-icon"></i> 
+          <i class='bx bx-search' id="search-icon"></i>
+          <i class='bx bx-cart-alt' id="cart-icon"></i>
+          <i class='bx bx-user' id="user-icon"></i>
+        </div>
+
+        <!--search box-->
+        <form class="search-box" id="search-form" onsubmit="return false;">
+            <input type="search" id="search-input" name="q" placeholder="search here...">
+            <button id="search-btn" aria-label="Search" title="Search" type="button"><i class='bx bx-search'></i></button>
+        </form>
+
+          <!--cart box (dynamic) -->
+          <div class="cart">
+                <div id="cart-items"></div>
+                <h2 id="cart-total">Total: $0.00</h2>
+                <a href="#" class="btn" id="checkout-btn">Checkout</a>
+          </div>
+
+        <!--user-->
+        <div class="user">
+            <h2>Login Now</h2>
+            <input type="email" placeholder="Your Email...">
+            <input type="password" name="" id="" placeholder="Password">
+            <input type="submit" value="Login" class="login-btn">
+            <p>Forgot password <a href="">Reset now</a></p>
+            <p>Don't have account <a href=" ">Create one</a></p>
+        </div>
+    </header>
+
+    <!--Home-->
+    <section class="home" id="home">
+        <div class="home-text">
+            <span>Shop now</span>
+            <h1>New Arrival of <br>fresh products</h1>
+            <a href="#" class="btn">Shop Now</a>
+        </div>
+
+        <div class="home-img">
+            <img src="IMAGES/hero-banner-2.jpg" alt="">
+        </div>
+    </section>
+
+    <!--New Arrival-->
+<section class="new" id="new">
+    <div class="heading">
+        <h1>New<span>Arrival</span></h1>
+    </div>
+
+    <div class="swiper new-arrival">
+        <div class="swiper-wrapper">
+                <div class="swiper-slide box">
+                     <img src="IMAGES/product-02.jpg" alt="">
+                     <div class="content">
+                           <button class="btn add-to-cart" type="button" title="Add Product 02 to cart" data-name="Product 02" data-price="50.05" data-img="IMAGES/product-02.jpg">Buy Now</button>
+                     </div>
+              </div>
+              <div class="swiper-slide box">
+                <img src="IMAGES/product-01.jpg" alt="">
+                <div class="content">
+                       <button class="btn add-to-cart" type="button" title="Add Product 01 to cart" data-name="Product 01" data-price="50.05" data-img="IMAGES/product-01.jpg">Buy Now</button>
+                </div>
+         </div>
+         <div class="swiper-slide box">
+                <img src="IMAGES/product-05.jpg" alt="">
+                <div class="content">
+                       <button class="btn add-to-cart" type="button" title="Add Product 05 to cart" data-name="Product 05" data-price="50.05" data-img="IMAGES/product-05.jpg">Buy Now</button>
+                </div>
+         </div>
+   
+         <div class="swiper-slide box">
+                <img src="IMAGES/oils.jpg" alt="">
+                <div class="content">
+                       <button class="btn add-to-cart" type="button" title="Add Oils to cart" data-name="Oils" data-price="50.05" data-img="IMAGES/oils.jpg">Buy Now</button>
+                </div>
+         </div>
+        </div>
+    </div>
+</section>
+
+<!--product-->
+<section class="product" id="product">
+    <div class="heading">
+        <h1>Our<span>Products</span></h1>
+    </div>
+    <div class="product-container">
+        <div class="box">
+            <img src="IMAGES/collection-1.jpg" alt="">
+            <div class="content">
+                <h2>Oil Perfumes</h2>
+                <div class="stars">
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star-half'></i>
+                </div>
+                <span>$50.05</span>
+                <button class="add-to-cart" type="button" title="Add to cart" data-name="Oil Perfumes" data-price="50.05" data-img="IMAGES/collection-1.jpg"><i class='bx bx-cart-alt'></i></button>
+            </div>
+        </div>
+        <div class="box">
+            <img src="IMAGES/collection-2.jpg" alt="">
+            <div class="content">
+                <h2>Oil Perfumes</h2>
+                <div class="stars">
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star-half'></i>
+                </div>
+                <span>$50.05</span>
+                <button class="add-to-cart" type="button" title="Add to cart" data-name="Oil Perfumes" data-price="50.05" data-img="IMAGES/collection-2.jpg"><i class='bx bx-cart-alt'></i></button>
+            </div>
+        </div>
+        <div class="box">
+            <img src="IMAGES/collection-3.jpg" alt="">
+            <div class="content">
+                <h2>Oil Perfumes</h2>
+                <div class="stars">
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star-half'></i>
+                </div>
+                <span>$50.05</span>
+                <button class="add-to-cart" type="button" title="Add to cart" data-name="Oil Perfumes" data-price="50.05" data-img="IMAGES/collection-3.jpg"><i class='bx bx-cart-alt'></i></button>
+            </div>
+        </div>
+        <div class="box">
+            <img src="IMAGES/banner-2.jpg" alt="">
+            <div class="content">
+                <h2>Oil Perfumes</h2>
+                <div class="stars">
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star-half'></i>
+                </div>
+                <span>$50.05</span>
+                <button class="add-to-cart" type="button" title="Add to cart" data-name="Oil Perfumes" data-price="50.05" data-img="IMAGES/banner-2.jpg"><i class='bx bx-cart-alt'></i></button>
+            </div>
+        </div>
+        <div class="box">
+            <img src="IMAGES/product-11.jpg" alt="">
+            <div class="content">
+                <h2>Oil Perfumes</h2>
+                <div class="stars">
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star-half'></i>
+                </div>
+                <span>$50.05</span>
+                <button class="add-to-cart" type="button" title="Add to cart" data-name="Oil Perfumes" data-price="50.05" data-img="IMAGES/product-11.jpg"><i class='bx bx-cart-alt'></i></button>
+            </div>
+        </div>
+        <div class="box">
+            <img src="IMAGES/product-06.jpg" alt="">
+            <div class="content">
+                <h2>Oil Perfumes</h2>
+                <div class="stars">
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star-half'></i>
+                </div>
+                <span>$50.05</span>
+                <button class="add-to-cart" type="button" title="Add to cart" data-name="Oil Perfumes" data-price="50.05" data-img="IMAGES/product-06.jpg"><i class='bx bx-cart-alt'></i></button>
+            </div>
+        </div>
+        <div class="box">
+            <img src="IMAGES/product-10.jpg" alt="">
+            <div class="content">
+                <h2>Oil Perfumes</h2>
+                <div class="stars">
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star-half'></i>
+                </div>
+                <span>$50.05</span>
+                <button class="add-to-cart" type="button" title="Add to cart" data-name="Oil Perfumes" data-price="50.05" data-img="IMAGES/product-10.jpg"><i class='bx bx-cart-alt'></i></button>
+            </div>
+        </div>
+        <div class="box">
+            <img src="IMAGES/product-07.jpg" alt="">
+            <div class="content">
+                <h2>Oil Perfumes</h2>
+                <div class="stars">
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star-half'></i>
+                </div>
+                <span>$50.05</span>
+                <button class="add-to-cart" type="button" title="Add to cart" data-name="Oil Perfumes" data-price="50.05" data-img="IMAGES/product-07.jpg"><i class='bx bx-cart-alt'></i></button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--Reviews-->
+<section class="reviews" id="reviews">
+    <div class="heading">
+        <h1>Our<span>Special</span>Collections</h1>
+    </div>
+    <div class="reviews-container">
+        <div class="box">
+            <img src="IMAGES/hero-banner-3.jpg" alt="">
+            <div class="stars">
+                <i class='bx bxs-star'></i>
+                <i class='bx bxs-star'></i>
+                <i class='bx bxs-star'></i>
+                <i class='bx bxs-star'></i>
+                <i class='bx bxs-star'></i>
+               
+            </div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat facilis assumenda doloremque optio culpa itaque vel dicta commodi quisquam fuga saepe quidem illum ullam expedita quae, tempore officia. Corporis, amet.</p>
+            <h2>Acacia</h2>
+        </div>
+        <div class="box">
+            <img src="IMAGES/hero-banner-2.jpg" alt="">
+            <div class="stars">
+                <i class='bx bxs-star'></i>
+                <i class='bx bxs-star'></i>
+                <i class='bx bxs-star'></i>
+                <i class='bx bxs-star'></i>
+                <i class='bx bxs-star'></i>
+               
+            </div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat facilis assumenda doloremque optio culpa itaque vel dicta commodi quisquam fuga saepe quidem illum ullam expedita quae, tempore officia. Corporis, amet.</p>
+            <h2>Broom</h2>
+        </div>
+        <div class="box">
+            <img src="IMAGES/hero-banner-1.jpg" alt="">
+            <div class="stars">
+                <i class='bx bxs-star'></i>
+                <i class='bx bxs-star'></i>
+                <i class='bx bxs-star'></i>
+                <i class='bx bxs-star'></i>
+                <i class='bx bxs-star'></i>
+               
+            </div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat facilis assumenda doloremque optio culpa itaque vel dicta commodi quisquam fuga saepe quidem illum ullam expedita quae, tempore officia. Corporis, amet.</p>
+            <h2>Summer</h2>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<section class="footer">
+    <div class="footer-container container">
+        <div class="footer-box">
+            <a href="#" class="logo"><i class='bx bx-spray-can'></i><span>Glow</span></a>
+            <div class="social">
+                <a href="#"><i class='bx bxl-facebook' ></i></a>
+                <a href="#"><i class='bx bxl-twitter' ></i></a>
+                <a href="#"><i class='bx bxl-instagram' ></i></a>
+                <a href="#"><i class='bx bxl-youtube' ></i></a>
+            </div>
+        </div>
+        <div class="footer-box">
+            <h3>Page</h3>
+            <a href="#">Home</a>
+            <a href="#">New Arrival</a>
+            <a href="#">Products</a>
+            <a href="#">Reviews</a>
+        </div>
+        <div class="footer-box">
+            <h3>Legal</h3>
+            <a href="#">Privacy</a>
+            <a href="#">Refund Policy</a>
+            <a href="#">Cookie Policy</a>
+        
+        </div>
+        <div class="footer-box">
+            <h3>Contact</h3>
+            <p>Ghana</p>
+            <p>United States</p>
+            <p>+1-223-3345</p>
+            <p>Glow@gmail.com</p>
+        </div>
+    </div>
+</section>
+<!-- Copyright-->
+<div class="copyright">
+    <p>&#169; Glow All Rights Reserved</p>
+</div>
+
+
+
+
+<!--swiper JS-->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+
+    <!--link to js-->
+    <script src="app.js"></script>
+</body>
+</html>

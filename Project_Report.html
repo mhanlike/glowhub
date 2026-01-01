@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Project Report — Glow E‑commerce</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <style>
+    @page { margin: 2cm 2cm 2cm 2.5cm; }
+    body{ font-family: 'Times New Roman', Times, serif; font-size: 12pt; line-height:1.5; color:#000; margin:0; padding:1.5cm; }
+    h1,h2,h3{ font-family: 'Times New Roman', Times, serif; font-weight:700; text-align:left; }
+    h1{ font-size:16pt; }
+    h2{ font-size:14pt; }
+    h3{ font-size:13pt; }
+    .titlepage{ display:flex; flex-direction:column; justify-content:center; align-items:flex-start; height:100vh; }
+    .center{ text-align:center }
+    .small-fig{ max-width:40%; max-height:120px; display:block; }
+    img.figure{ max-width:200px; height:auto; }
+    .figure-caption{ font-size:11pt; }
+    .figure{ margin:0.5cm 0; }
+    .reference{ margin-left:0.5cm; }
+    nav.toc{ margin-bottom:1cm }
+    .page-break{ page-break-after: always; }
+  </style>
+</head>
+<body>
+  <div class="titlepage">
+    <h1>Glow — E‑commerce Website</h1>
+    <p>Project Report</p>
+    <p>Author: (Your Name)</p>
+    <p>Date: January 2026</p>
+    <div style="height:40px"></div>
+    <p><strong>Website URL:</strong> <a href="#" id="site-url">(replace-with-live-url)</a></p>
+  </div>
+
+  <div class="page-break"></div>
+
+  <nav class="toc">
+    <h2>Table of Contents</h2>
+    <ol>
+      <li>Introduction and project background</li>
+      <li>Website planning and design
+        <ol class="reference">
+          <li>Site map (Figure 1.1)</li>
+          <li>Page structure</li>
+        </ol>
+      </li>
+      <li>Development process and implementation details</li>
+      <li>Tools and technologies used</li>
+      <li>Challenges encountered and solutions</li>
+      <li>Conclusion</li>
+      <li>Appendices (screenshots, code snippets)</li>
+    </ol>
+  </nav>
+
+  <div class="page-break"></div>
+
+  <section>
+    <h2>1. Introduction and project background</h2>
+    <p>This document describes the design, development, and deployment of the Glow e-commerce website. The project aims to create a small responsive online storefront showcasing product collections, with a simple cart system, search capability, and multi-page site structure for easier navigation and maintenance. The site is split into five main pages: Home, New Arrivals, Products, Reviews, and Contact. The work follows the course instructions and demonstrates front-end development, responsive design, basic client-side state (cart), and documentation.</p>
+
+    <p>The rest of the report presents planning artifacts (site map and page structure), implementation details including code structure and decisions, tools and technologies used, the main challenges encountered and how they were resolved, and concluding remarks. Figures are numbered using chapter-based numbering; for example Figure 1.1 is the site map referred to below.</p>
+
+    <div class="figure">
+      <img src="IMAGES/site-map-placeholder.png" alt="Site map placeholder" class="figure" />
+      <div class="figure-caption">Figure 1.1: Site Map — planned site structure (placeholder). As shown in Figure 1.1, the site map illustrates the planned website structure.</div>
+    </div>
+
+    <p>Note: Replace the placeholder site map image with the final diagram file. The figure is intentionally small so it occupies less than one quarter of a printed page.</p>
+  </section>
+
+  <div class="page-break"></div>
+
+  <section>
+    <h2>2. Website planning and design</h2>
+    <h3>2.1 Site map and page structure</h3>
+    <p>The site contains five interlinked pages. The navigation appears on each page to allow seamless movement between pages. Each page uses the shared stylesheet <code>style.css</code> and shared script <code>app.js</code> to keep behavior consistent and minimize duplication.</p>
+
+    <h3>2.2 Wireframes and layout decisions</h3>
+    <p>The primary layout uses a fixed header containing the logo and navigation, a hero section on the homepage, product grids, and a footer with contact and legal links. CSS Grid and Flexbox are used to produce responsive product grids and layout adjustments at defined breakpoints. The design emphasizes readability and simple interactions such as add-to-cart, search, and toggling mobile menu.</p>
+
+    <h3>2.3 Accessibility and mobile first considerations</h3>
+    <p>Buttons include title attributes for screen readers, and interactive elements use semantic elements where possible. The CSS includes breakpoints for major device widths to ensure the site remains usable on phones and tablets.</p>
+  </section>
+
+  <div class="page-break"></div>
+
+  <section>
+    <h2>3. Development process and implementation details</h2>
+    <h3>3.1 Code organization</h3>
+    <p>Files added/updated in the repository:</p>
+    <ul>
+      <li><code>index.html</code> — updated homepage, navigation links now point to dedicated pages.</li>
+      <li><code>new/index.html</code>, <code>products/index.html</code>, <code>reviews/index.html</code>, <code>contact/index.html</code> — new pages sharing common header/footer and assets.</li>
+      <li><code>style.css</code> — shared stylesheet for consistent appearance across pages.</li>
+      <li><code>app.js</code> — updated to add Google search support and a localStorage-backed cart.</li>
+      <li><code>Project_Report.html</code> and <code>Project_Report.md</code> — documentation files.</li>
+    </ul>
+
+    <h3>3.2 Key implementation details</h3>
+    <p>The cart is implemented entirely client-side using <code>localStorage</code> to persist cart contents across pages and reloads. Items added to the cart include a name, image path, price and quantity. The cart UI is rendered dynamically from the stored array; remove actions update storage and re-render the cart.</p>
+
+    <p>The search box is wired to open a Google results page using the entered query. The search action is triggered by the dedicated search button or the Enter key, opening results in a new tab.</p>
+
+    <h3>3.3 Navigation and interlinking</h3>
+    <p>All pages use relative links for portability within the repository. The navigation ensures each page is reachable from any other page. The footer also includes links to the main sections.</p>
+  </section>
+
+  <div class="page-break"></div>
+
+  <section>
+    <h2>4. Tools and technologies used</h2>
+    <ul>
+      <li>HTML5 and semantic markup</li>
+      <li>CSS3 (Flexbox, Grid) — responsive layout and breakpoints</li>
+      <li>Vanilla JavaScript for interactivity and localStorage handling</li>
+      <li>Swiper.js for the new-arrivals carousel</li>
+      <li>Boxicons for iconography</li>
+      <li>Git for version control (local commits created); pushing to remote depends on remote configuration</li>
+      <li>Any modern browser for testing and printing to PDF for submission</li>
+    </ul>
+  </section>
+
+  <div class="page-break"></div>
+
+  <section>
+    <h2>5. Challenges encountered and solutions</h2>
+    <h3>5.1 Cross-page cart state</h3>
+    <p>Challenge: keeping the cart state consistent while the site is split across multiple pages. Solution: store the cart as JSON in <code>localStorage</code> and use the same key (<code>gh_cart</code>) on every page; render cart on DOMContentLoaded so each page reads the same shared state.</p>
+
+    <h3>5.2 Mobile navigation and header behaviors</h3>
+    <p>Challenge: header controls (menu, search, cart, user) can overlap on small screens. Solution: use CSS breakpoints to transform the navbar into a slide-in menu; JavaScript toggles the menu and ensures other panels close when one opens.</p>
+
+    <h3>5.3 Accessibility and button labeling</h3>
+    <p>Challenge: icon-only buttons are not descriptive for assistive technologies. Solution: add <code>title</code> and <code>aria-label</code> attributes and ensure text alternatives are present where meaningful.</p>
+  </section>
+
+  <div class="page-break"></div>
+
+  <section>
+    <h2>6. Conclusion</h2>
+    <p>The Glow e-commerce site demonstrates a small but complete front-end prototype with multi-page structure, client-side cart persistence, Google-powered search, and responsive layout. The deliverables include the website files and this project report. For final submission, replace placeholder URLs and images with production assets, test across multiple devices, and (optionally) add a lightweight backend for order processing.</p>
+  </section>
+
+  <div class="page-break"></div>
+
+  <section>
+    <h2>Appendix A — Screenshots and selected code snippets</h2>
+    <p>Below are placeholders for screenshots. Please replace with actual images taken from your local browser of each page. Each figure is referenced in the text above where relevant.</p>
+    <div class="figure">
+      <img src="IMAGES/hero-banner-2.jpg" alt="Homepage screenshot" class="small-fig" />
+      <div class="figure-caption">Figure A.1: Homepage screenshot.</div>
+    </div>
+
+    <h3>Selected code: cart rendering (simplified)</h3>
+    <pre style="background:#f4f4f4;padding:8px;border:1px solid #ddd;overflow:auto; max-height:300px;"><code>function renderCart(){
+  const items = JSON.parse(localStorage.getItem('gh_cart') || '[]');
+  // render items, compute total and attach remove handlers
+}</code></pre>
+  </section>
+
+  <div class="page-break"></div>
+
+  <section>
+    <h2>References</h2>
+    <p>Browser documentation, Swiper.js docs, and course materials provided by the lecturer.</p>
+  </section>
+
+</body>
+</html>
